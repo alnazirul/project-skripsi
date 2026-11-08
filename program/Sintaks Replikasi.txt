@@ -1,0 +1,11 @@
+# Sintaks Konfigurasi Replikasi pada Master 
+GRANT REPLICATION SLAVE ON *.* TO 'user@ip_address_slave' IDENTIFIED BY 'password';
+
+# Sintaks Konfigurasi Replikasi pada Slave
+change master to
+master_host='ip_address_master',
+master_user='user',
+master_password='password',
+master_port=3306,
+master_log_file='nama_log_file',
+master_log_pos=posisi_log;

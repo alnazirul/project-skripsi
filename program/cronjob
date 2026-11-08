@@ -1,0 +1,15 @@
+# ============================================================
+# BACKUP MARIADB
+# ============================================================
+
+# Full Backup — setiap hari jam 02:00
+0 2 * * * /usr/local/bin/mysql_full_backup.sh
+
+# Incremental Backup — jam 09:00
+0 9 * * * /usr/local/bin/mysql_incremental_backup.sh
+
+# Incremental Backup — jam 15:00
+0 15 * * * /usr/local/bin/mysql_incremental_backup.sh
+
+# Incremental Backup — jam 21:00
+0 21 * * * /usr/local/bin/mysql_incremental_backup.sh
